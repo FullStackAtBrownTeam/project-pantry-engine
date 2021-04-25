@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela&family=Voces&display=swap");
+.recipe-card:hover {
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.35);
+}
+
+.recipe-card {
+  transition: 0.3s cubic-bezier(0.29, 0.87, 0.7, 1.02);
+}
+
+.recipe-card .list-group-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.embedded {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+.floating {
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.25);
+}
+
+.highlighted-floating {
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.35);
+  transition: 0.3s cubic-bezier(0.29, 0.87, 0.7, 1.02);
+}
+
+.block-title {
+  font-family: "Varela", sans-serif;
+  display: block;
+  top: 20px;
+  font: 35px "Voces", cursive;
+  color: #1B1A1A;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+.recipe-card {
+  margin: 0.25em 1em;
+  border-radius: 1.5em;
+  height: 8em;
+  cursor: pointer;
+}
+.recipe-card .recipe-card-image {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe-card .list-group-item {
+  padding: 0.25rem 0.5rem;
+}
+.recipe-card .card-title {
+  color: #504D4C;
+  font-size: 1.7em;
+}
+.recipe-card .card-text {
+  color: #AFAFAF;
+}
+.recipe-card .card-body {
+  height: inherit;
+}
+.recipe-card .row {
+  height: inherit;
+}
+.recipe-card .col {
+  height: inherit;
+  max-width: 58%;
+}
+.recipe-card .col-5 {
+  height: inherit;
+}
+.recipe-card .ingredients-possessed {
+  border-top: 0;
+  color: #AFAFAF;
+}
+.recipe-card .ingredients-missing {
+  color: #AD6464;
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+}
+
+.recipe-preview .modal-content {
+  border-radius: 1em;
+}
+.recipe-preview .modal-content #recipe-preview-name {
+  font: 32px "Voces", cursive;
+}
+.recipe-preview .modal-content .row {
+  height: 15em;
+  margin: 0;
+}
+.recipe-preview .modal-content .recipe-preview-text {
+  padding: 10px;
+  height: auto;
+  display: block;
+}
+.recipe-preview .modal-content .recipe-preview-text h2 {
+  font: 32px "Voces", cursive;
+}
+.recipe-preview .modal-content .recipe-preview-text p {
+  color: #504D4C;
+  font: 24px "Varela", sans-serif;
+}
+.recipe-preview .modal-content .modal-header {
+  padding: 10px;
+}
+.recipe-preview .modal-content .modal-body {
+  padding: 0;
+}
+.recipe-preview .modal-content .recipe-preview-image {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ingredient-search-bar {
+  border-style: none;
+}
+
+.recipe-search-bar {
+  color: #AFAFAF;
+  background-color: transparent;
+  border-style: none;
+  font-size: 20px;
+}
+
+.ingredient-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font: 22px "Voces", cursive;
+}
+
+#site-title {
+  display: block;
+  margin-left: 15%;
+  top: 20px;
+  font: 70px "Voces", cursive;
+  color: #504D4C;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+
+#pantry-list {
+  width: 85%;
+  opacity: 0.92;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #D5DDE0;
+  font-family: "Voces", cursive;
+}
+
+/*# sourceMappingURL=index.css.map */

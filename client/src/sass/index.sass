@@ -1,0 +1,157 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Varela&family=Voces&display=swap')
+
+// COLOR SCHEME
+$background-color: #D5DDE0
+$thick-text: #504D4C
+$thin-text: #1B1A1A
+$light-gray-text: #AFAFAF
+
+$missing: #AD6464
+
+// COMPONENTS
+
+$varela: 'Varela', sans-serif
+$voces: 'Voces', cursive
+
+$embedded: 4px 4px 5px rgba(0, 0, 0, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.7)
+$floating: 0px 3px 9px rgba(0, 0, 0, 0.25)
+$highlighted-floating: 0px 3px 14px rgba(0, 0, 0, 0.35)
+
+$transition-animation: cubic-bezier(0.29, 0.87, 0.7, 1.02)
+
+%highlighted-floating
+    box-shadow: $highlighted-floating
+
+%default-transition
+    transition: 0.3s $transition-animation
+
+%ellipsis-overflow
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+
+// CLASSES
+
+.embedded
+    box-shadow: $embedded
+.floating
+    box-shadow: $floating
+
+.highlighted-floating
+    box-shadow: $highlighted-floating
+    transition: 0.3s $transition-animation
+
+.block-title
+    font-family: $varela
+    display: block
+    top: 20px
+    font: 35px $voces
+    color: $thin-text
+    text-shadow: $embedded // see if we want to keep this
+
+.recipe-card
+    margin: 0.25em 1em
+    border-radius: 1.5em
+    height: 8em
+    cursor: pointer
+    @extend %default-transition
+
+    .recipe-card-image
+        border-radius: 1em
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .list-group-item
+        padding: 0.25rem 0.5rem
+        @extend %ellipsis-overflow
+    .card-title
+        color: $thick-text
+        font-size: 1.7em
+    .card-text
+        color: $light-gray-text
+    .card-body
+        height: inherit
+    .row
+        height: inherit
+    .col
+        height: inherit
+        max-width: 58%
+    .col-5
+        height: inherit
+    
+    &:hover
+        @extend %highlighted-floating
+
+    .ingredients-possessed
+        border-top: 0
+        color: $light-gray-text
+    .ingredients-missing
+        color: #AD6464
+
+.modal-backdrop
+    backdrop-filter: blur(8px)
+.recipe-preview
+    .modal-content
+        border-radius: 1em
+        #recipe-preview-name
+            font: 32px $voces
+        .row
+            height: 15em
+            margin: 0
+        .recipe-preview-text
+            padding: 10px
+            height: auto
+            display: block
+            h2
+                font: 32px $voces
+            p
+                color: $thick-text
+                font: 24px $varela
+        .modal-header
+            padding: 10px
+            //border: none
+        .modal-body
+            padding: 0
+        .recipe-preview-image
+            cursor: pointer
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+.ingredient-search-bar
+    border-style: none
+
+.recipe-search-bar
+    color: $light-gray-text
+    background-color: transparent
+    border-style: none
+    font-size: 20px
+
+.ingredient-text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    font: 22px $voces
+
+// IDS
+
+#site-title
+    display: block
+    margin-left: 15%
+    top: 20px
+    font: 70px $voces
+    color: $thick-text
+    text-shadow: $embedded
+
+#pantry-list
+    width: 85%
+    opacity: 0.92
+    max-height: 60vh
+    overflow-y: scroll
+
+// TAGS
+
+body
+    background-color: $background-color
+    font-family: $voces
